@@ -1,0 +1,60 @@
+{% extends "api/base.html" %}
+
+{% block content %}
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-color: black">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Trooper Transfer</h1>
+                        <hr class="small">
+                        <span class="subheading">Your Freedom Starts Here</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+                <div class="post-preview">
+                    <a href="{% url 'about' %}">
+                        <h2 class="post-title">About The Author</h2>
+                        <h3 class="post-subtitle">Everything you need to know about me</h3>
+                    </a>
+                </div>
+                <hr>
+
+                <div class="post-preview">
+                    <a href="{% url 'army' %}">
+                        <h2 class="post-title">Army Posts</h2>
+                        <h3 class="post-subtitle">Stories, lessons, and tears start here. TOXIC LANGUAGE AHEAD</h3>
+                    </a>
+                </div>
+                <hr>
+
+                <div class="post-preview">
+                    <a href="{% url 'tech' %}">
+                        <h2 class="post-title">Technology Posts</h2>
+                        <h3 class="post-subtitle">For all the nerds in the wild</h3>
+                    </a>
+                </div>
+                <hr>
+
+                <!-- Pager -->
+                <!--<ul class="pager">
+                    <li class="next">
+                        <a href="#">Older Posts &rarr;</a>
+                    </li>
+                </ul>-->
+            </div>
+        </div>
+    </div>
+
+    <hr>
+{% endblock content %}

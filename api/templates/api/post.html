@@ -1,0 +1,54 @@
+{% extends 'api/base.html' %}
+
+{% block content %}
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-color: black">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>{{ post.title }}</h1>
+                        <h2 class="subheading">{{ post.subtitle }}</h2>
+                        <span class="meta">Posted by <a href="#">{{ post.author.first_name }} {{ post.author.last_name }}</a> on {{ post.created_on }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    {{ post.content | safe }}
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+
+    <script type="text/javascript">
+        function createIds(tag){
+            const list = document.getElementsByTagName(tag);
+
+            for(let i=0; i<list.length; i++){
+                const elem = list[i];
+
+                let id = elem.innerHTML.toLowerCase();
+                
+                //id = id.replace(/([^a-z0-9\s/-])/g, "");
+                id = id.replace(/([^\w0-9\s/-])/g, "");
+                id = id.replace(/ /g, "-");
+
+                elem.id = id
+            }
+        }
+
+        createIds("h2");
+        createIds("h3");
+        
+    </script>
+{% endblock content %}

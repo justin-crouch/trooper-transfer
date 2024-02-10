@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+# Control access and workflow of posts
 STATUS = (
     (0,"Draft"),
     (1,"Publish")
@@ -11,6 +12,7 @@ THREAD = (
 )
 
 class Post(models.Model):
+    """ Model describing what a post is """
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     subtitle = models.CharField(max_length=200)

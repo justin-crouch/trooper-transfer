@@ -1,7 +1,8 @@
 # Welcome To Trooper-Transfer
-This is a working Django blog using Summernote as the editing framework for each post.
+This is a working Django blog using Summernote as the editing framework for each post. The website was built using Python 3.10.
 
-You can clone the repo using the following command:
+## Setup
+Clone repo:
 ```
 git clone https://github.com/justin-crouch/trooper-transfer.git
 ```
@@ -11,9 +12,15 @@ Change into the main website directory:
 cd trooper-transfer
 ```
 
-Afterwards, load the virtual environment (for Windows):
-``` 
+Create and activate virtual environment:
+```
+virtualenv venv
 venv/Scripts/activate
+```
+
+Install requirements:
+``` 
+pip install -r requirements.txt
 ```
 
 Finally, run the local server:

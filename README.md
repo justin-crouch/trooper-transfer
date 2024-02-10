@@ -32,6 +32,6 @@ python manage.py runserver
 The website was built using **Python 3.10**.
 
 To log in to the admin portal:
-> Username: Admin
+> Username: admin
 
-> Password: Admin
+> Password: admin

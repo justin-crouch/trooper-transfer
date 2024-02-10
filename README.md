@@ -1,5 +1,5 @@
 # Welcome To Trooper-Transfer
-This is a working Django blog using Summernote as the editing framework for each post. The website was built using Python 3.10.
+This is a working Django blog using Summernote as the editing framework for each post.
 
 ## Setup
 Clone repo:
@@ -27,3 +27,10 @@ Finally, run the local server:
 ```
 python manage.py runserver
 ```
+
+## Side Notes
+The website was built using Python 3.10.
+
+To log in to the admin portal:
+> Username: Admin
+> Password: Admin
